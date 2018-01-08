@@ -1,7 +1,5 @@
 //calcula-imc.js
-console.log(document.querySelector(".titulo"));
 var titulo = document.querySelector(".titulo");
-console.log(titulo.textContent);
 titulo.textContent = "Aparecida Nutricionista"
 var paciente = document.querySelector("#primeiro-paciente");
 
@@ -35,8 +33,15 @@ for (var i = 0; i < pacientes.length; i++) {
     }
     
     if (alturaEhValida && pesoEhValido){
-        var imc = peso / (altura * altura);
-        tdImc.textContent = imc.toFixed(2);
+        var imc = calculaImc(peso,altura);
+        tdImc.textContent = imc;
     }
 }
+    //caclula imc
+    function calculaImc(peso,altura){
+        var imc = 0;
+        imc = peso /(altura * altura);
+        return imc.toFixed(2);
+    }
+
 
