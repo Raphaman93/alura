@@ -1,0 +1,138 @@
+<meta charset="UTF-8">
+<script>
+ 	function pulaLinha(){
+ 		document.write("<br>");
+ 	}
+	var ano = 2012;
+	document.write("Eu nasci em : " + (ano - 25));
+	pulaLinha();
+	document.write("Adriano nasceu em : " + (ano - 26));
+	pulaLinha();
+	document.write("Paulo nasceu em : " + (ano - 32));
+	pulaLinha();
+
+	function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+	}
+
+	var titulo = "Bem-vindo ao meu programa!";
+
+    document.write("<h1>" + titulo + "</h1>");
+
+    pulaLinha();
+
+    document.write("Vocês não sabem o que tive que aprender para fazer isso!");
+
+    pulaLinha();
+
+    document.write("Contudo, assistindo os vídeos e estudando ...");
+
+    pulaLinha();
+
+    document.write("Eu vou mais longe!");
+
+    pulaLinha();
+
+    function exibeAlerta(mensagem) {
+        alert("***" + mensagem + "***");
+    }
+
+    var idade1 = 10;
+    var idade2 = 20;
+    var idade3 = 30;
+    var totalIdades = idade1 + idade2 + idade3;
+    var mediaIdades = totalIdades/3;
+
+    exibeAlerta("Total de idades é " + totalIdades);
+    exibeAlerta("A média das idades é " +  mediaIdades);
+
+     function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+    
+
+    mostra("<h1>Bem-vindos</h1>");
+    mostra("<p>Este é um simples programa</p>");
+
+    function calculaImc(altura,peso){
+    	var imc = peso/(altura*altura)
+    	return imc;
+    }
+
+        var alturaInformada = prompt("Informe sua altura");
+    var pesoInformado = prompt("informe seu peso");
+
+    var imc = calculaImc(alturaInformada, pesoInformado);
+
+    document.write("O IMC calculado é " + imc);
+
+    var pesoAmigo=70;
+    var alturaAmigo=1.77;
+    var imcAmigo = calculaImc(alturaAmigo,pesoAmigo);
+    mostra("O imc do meu amigo é "+ Math.round(imcAmigo));
+    mostra("Ele ainda está "+ Math.round(imcAmigo-18.5)+" pontos acima do limite de magreza");
+
+    if(imc >= 18.5 && imc <= 35) {
+    mostra("OK! Seu IMC está entre os dois limites.");
+}
+
+    var vitorias = parseInt(prompt("Quantos jogos o CDC Futebol Clube venceu?"));
+	var empates = parseInt(prompt("Quantos jogos o CDC Futebol Clube empatou?"));
+	var pontos = (vitorias * 3) + empates;
+
+mostra("Nosso time tem " + pontos + " pontos!");
+
+if(pontos > 28) {
+    mostra("Nosso time está indo MELHOR que o Livros Velhos!");
+}
+
+if(pontos < 28) {
+    mostra("Nosso time está indo PIOR que o Livros Velhos!");
+}
+
+if(pontos == 28) {
+    mostra("Nosso time está EMPATADO com o Livros Velhos!");
+}
+
+  var idade = parseInt(prompt("Qual é sua idade"));
+   var temCarteira = prompt("Tem carteira? Responda S ou N");
+  
+    if( idade >= 18 && temCarteira == "S") {
+        mostra("Pode dirigir");
+    } else {
+        mostra("Não pode dirigir");
+    }
+
+    function sorteia(n){
+  		var n = Math.round(Math.random()*100);
+  		return n;
+    }
+
+    var numeroPensado = sorteia(100);
+
+    var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
+
+    if(chute == numeroPensado) {
+
+        mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+    } else {
+    	if(chute > numeroPensado) {
+
+            mostra("Você errou! Seu chute é maior que o número pensado!");
+
+        } else {
+
+            mostra("Você errou! Seu chute é menor que o número pensado!");
+        }
+    }
+
+    var anoCopa = 1930;
+    var copaAtual= 2014;
+	while(anoCopa <= copaAtual) {
+    alert(anoCopa + " tem copa!");
+    anoCopa = anoCopa + 4;
+	}
+
+</script>
